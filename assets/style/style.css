@@ -20,9 +20,9 @@ body{
 
 /* Utility */
 
-/* .debug{
+.debug{
   border: 2px solid red;
-} */
+}
 
 .d_flex{
   display: flex;
@@ -30,6 +30,10 @@ body{
 
 .mt_s{
   margin-top: 20px;
+}
+
+.mt_l{
+  margin-top: 100px;
 }
 
 .mb_s{
@@ -47,6 +51,11 @@ body{
 .pad_m{
   padding: 0px 70px;
 }
+
+.padt_m{
+  padding-top: 50px;
+}
+
 .padt_xl{
   padding-top: 100px;
 }
@@ -315,8 +324,7 @@ main .container.columns{
 }
 
 .image_dropbox img{
-  width: 600px;
-  padding-left: 80px;
+  max-width: 100%
 }
 
 .container.partner .left_side{
@@ -324,7 +332,6 @@ main .container.columns{
   padding:70px 20px;
 }
 
-.left_side
 
 
 
