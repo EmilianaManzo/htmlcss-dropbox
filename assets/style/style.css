@@ -20,9 +20,9 @@ body{
 
 /* Utility */
 
-.debug{
+/* .debug{
   border: 2px solid red;
-}
+} */
 
 .d_flex{
   display: flex;
@@ -49,6 +49,10 @@ h3{
   margin-bottom: 60px;
 }
 
+.pb_xl{
+  padding-bottom: 100px;
+}
+
 .pad_s{
   padding: 0 20px;
 }
@@ -61,7 +65,7 @@ h3{
   padding-top: 50px;
 }
 
-.padt_xl{
+.padt_l{
   padding-top: 100px;
 }
 
@@ -162,7 +166,7 @@ header .head_nav {
 .jumbotron{
   background-color: var(--sixth-color);
   margin-top: 80px;
-  height:730px;
+  height: 680px;
 }
 .jumbotron h1{
   font-size: 4rem;
@@ -172,7 +176,7 @@ header .head_nav {
 .jumbotron .container{
   
   position: relative;
-  bottom: 2px;
+  bottom: 5px;
 }
 
 
@@ -398,9 +402,12 @@ main .container.columns{
   width: 20%;
   margin: 30px 0;
   border: 1px solid var(--seventh-color);
-
 }
 
+.active_border:hover{
+  border: 15px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
 
 .mini_square img{
   width: 50%;
@@ -461,7 +468,51 @@ main .container.columns{
 }
 
 /* FAQ */
+section.faq{
+  height:600px ;
+}
 
+div.faq{
+  border-bottom: 2px solid var(--fifth-color);
+  position: relative;
+}
+
+h2.faq{
+  font-size: 2rem;
+  padding-bottom: 30px;
+  border-bottom: 2px solid var(--fifth-color);
+}
+
+.faq .container  div{
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.hidden{
+  display: none;
+}
+
+.visible:hover + .hidden{
+  display: block;
+}
+
+.close,
+.open{
+  color: var(--first-color);
+  font-size: .8rem;
+  position: absolute;
+  right:25px;
+  top:14px;
+}
+
+.arrow:hover .close,
+.arrow .open{
+  display: none;
+}
+
+.arrow:hover .open{
+  display: block;
+}
 
 /* Footer  */
 footer{
