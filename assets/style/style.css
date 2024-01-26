@@ -40,8 +40,15 @@ body{
   margin-bottom: 60px;
 }
 
+.pad_s{
+  padding: 0 20px;
+}
+
 .pad_m{
   padding: 0px 70px;
+}
+.padt_xl{
+  padding-top: 100px;
 }
 
 .container{
@@ -58,7 +65,7 @@ nav ul li{
   list-style: none;
 }
 
-.blue_a{
+.btn_link{
   text-decoration: none;
   color: var(--second-color);
   background-color: var(--third-color);
@@ -76,7 +83,6 @@ a:hover{
 /* Header  */
 header{
   height: 80px;
-  padding: 20px 20px;
   width: 100%;
   background-color: var(--second-color);
   position: fixed;
@@ -85,17 +91,24 @@ header{
   z-index: 999;
 }
 
+header .big_container{
+  height: 80px;
+}
+
+header .logo img{
+  position: relative; 
+  top: 34%;
+}
 header .head_nav {
   font-size: .9rem;
   width: 100%;
   justify-content: space-between;
-  align-items: center;
 }
 
 .left_nav,
 .right_nav{
   width: 50%;
-  height: 100%;
+  height: 80px;
 }
 
 .left_nav{
@@ -104,13 +117,13 @@ header .head_nav {
 
 .left_nav ul,
 .right_nav ul{
-  height: 100%;
-  align-items: center;
+  line-height: 80px;
 }
 
 .right_nav ul{
   justify-content: flex-end;
 }
+
 
 .left_nav li{
   margin-right: 20px ;
@@ -120,23 +133,29 @@ header .head_nav {
   margin-left: 20px;
 }
 
+.active:hover{
+  border-bottom: 2.5px solid var(--fifth-color);
+  cursor: pointer;
+}
+
 
 /* Jumbotrone */
 .jumbotron{
   background-color: var(--sixth-color);
-  padding-top: 20px;
   margin-top: 80px;
-  height:650px;
+  height:730px;
 }
 .jumbotron h1{
   font-size: 4rem;
   font-weight: 800;
 }
 
-.jumbotron .undertitle{
+.jumbotron .container{
+  
   position: relative;
-  top: 40px;
+  bottom: 2px;
 }
+
 
 .jumbotron .left_undertitle {
   width: 30%;
@@ -163,23 +182,14 @@ header .head_nav {
 /* Main */
 
 /* section plane  */
-main .plane{
-  height: 100%;
-}
 
 main .container.planes{
   height: 10%;
-  padding-top: 100px;
 }
 
-main .container span{
-  font-size: .7rem;
+.container.planes span{
+  cursor: pointer;
 }
-
-main .container i{
-  font-size: 1rem;
-}
-
 main .container span i{
   color:var(--fifth-color);
 }
