@@ -101,10 +101,11 @@ ul li{
   background-color: var(--third-color);
   padding: 10px 20px;
   font-size: .7rem;
+  transition: all .5s;
 }
 
 a:hover{
-  opacity: .8;
+  opacity: .65;
 }
 
 .border{
@@ -120,6 +121,7 @@ header{
   left: 0;
   top: 0;
   z-index: 999;
+  box-shadow: 0 1px 5px var(--) ;
 }
 
 header .big_container{
@@ -151,6 +153,11 @@ header .head_nav {
   line-height: 80px;
 }
 
+.left_nav li,
+.right_nav li{
+  position: relative;
+}
+
 .right_nav ul{
   justify-content: flex-end;
 }
@@ -163,6 +170,34 @@ header .head_nav {
 .right_nav li{
   margin-left: 20px;
 }
+
+.left_nav li .hidden_menu,
+.right_nav li .hidden_menu{
+  position: absolute;
+  top: 80px;
+  left: 0;
+  z-index: -1;
+  background-color:var(--second-color) ;
+  font-weight: 500;
+  line-height: 30px;
+  opacity:0;
+  transition: .7s linear;
+  animation-duration: 2s;
+  animation-fill-mode:forwards ;
+}
+
+.left_nav li:hover .hidden_menu,
+.right_nav li:hover .hidden_menu{
+  opacity: 1;
+}
+
+.hidden_menu li i {
+  margin: 0 5px;
+  color: var(--third-color);
+}
+
+
+
 
 .active:hover{
   border-bottom: 2.5px solid var(--fifth-color);
@@ -262,6 +297,7 @@ main .container.columns{
 .column .bottom i{
   font-size: 0.7rem;
   color: var(--first-color);
+  margin-right:7px; 
 }
 
 .column .bottom .blue{
@@ -271,9 +307,7 @@ main .container.columns{
 .info div{
   font-size: .8rem; 
 }
-.info div i{
-  margin-right:10px;
-}
+
 
 .column .bottom a,
 .column .link{
@@ -389,6 +423,7 @@ main .container.columns{
   aspect-ratio: 1 / 1;
   flex-wrap: wrap;
   overflow: auto;
+  position: relative;
 }
 .big_container .mini_square{
   aspect-ratio: 1 / 1;
@@ -410,8 +445,11 @@ main .container.columns{
   border: 1px solid var(--seventh-color);
 }
 
-.active_border:hover{
-  border: 15px solid rgba(255, 255, 255, 0.5);
+/* il bordo .active_border_on l'ho inserito per essere più fedele al layout ma non dovrebbe esserci */
+.active_border:hover,
+.active_border_on{
+  box-shadow:0 0 6px 10px rgba(255, 255, 255, .4) inset;
+  transition: .5s;
   cursor: pointer;
 }
 
@@ -421,7 +459,7 @@ main .container.columns{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+  filter: invert(1);
 }
 
 .mini_square.designit{
@@ -473,6 +511,10 @@ main .container.columns{
   font-weight: bolder;
 }
 
+.free_trial .btn_link.white:hover{
+  background-color: whitesmoke;
+}
+
 /* FAQ */
 section.faq{
   height:600px ;
@@ -495,11 +537,14 @@ h2.faq{
 }
 
 .hidden{
-  display: none;
+  opacity: 0;
+  height: 0;
 }
 
 .visible:hover + .hidden{
-  display: block;
+  opacity: 1;
+  height: 100%;
+  transition: 1s;
 }
 
 .close,
@@ -513,12 +558,12 @@ h2.faq{
 
 .visible .open,
 .visible:hover .close{
-  display: none;
+  opacity: 0;
 }
 
 .visible:hover .open,
 .visible .close{
-  display: block;
+  opacity: 1;
 }
 
 /* Footer  */
