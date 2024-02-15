@@ -609,3 +609,59 @@ footer{
   font-size: 0.8rem;
   padding-top: 20px;
 }
+
+
+
+/* CUSTOM RADIO BUTTON  */
+
+.d_flex{
+  display: flex;
+  cursor: pointer;
+}
+
+.form-control {
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+}
+
+.form-control input{
+  margin-right: 30px;
+  appearance: none;
+
+  /* font: inherit; */
+  color: yellow;
+  width: 20px;
+  height: 20px;
+  border: 3px solid lightblue;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-control input[type="radio"]::before {
+  content: "";
+  border-radius: 50%;
+  width: .5rem;
+  height: .5rem;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: .2em .3em  rgba(59, 67, 71, 0.096);
+  background-color: rgb(29, 19, 164);
+  text-align: center;
+  line-height: 1rem;
+  transform-origin: top left;
+  
+}
+
+.form-control input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+
+.form-control input[type="radio"]:checked:focus {
+  outline: max(1px, .3rem) solid rgb(29, 19, 164);
+}
+
